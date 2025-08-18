@@ -9,10 +9,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Selenium1 {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		
-		WebDriverManager.chromedriver().setup();
+	public static void main(String[] args) {WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
         String title=driver.getTitle();
@@ -23,6 +20,9 @@ public class Selenium1 {
         
         driver.findElement(By.name("username")).sendKeys("Admin");
         driver.findElement(By.name("password")).sendKeys("admin123");
+		// TODO Auto-generated method stub
+		
+		
         driver.findElement(By.xpath("//button[@type='submit']")).click();
         
 	}
