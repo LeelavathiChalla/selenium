@@ -1,0 +1,986 @@
+<html>
+<head>
+<title>TestNG:  Lab4 on Edge</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Lab4 on Edge</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/0/3</td>
+</tr><tr>
+<td>Started on:</td><td>Tue Aug 19 13:34:27 IST 2025</td>
+</tr>
+<tr><td>Total time:</td><td>118 seconds (118136 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='selenium_java.Lab_8_2.setup()'><b>setup</b><br>Test class: selenium_java.Lab_8_2<br>Parameters: edge<br/>
+<a href="#Output-1163421535" onClick='toggleBox("Output-1163421535", this, "Show output", "Hide output");'>Show output</a>
+
+<a href="#Output-1163421535" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1163421535">
+Launching browser: edge<br/>
+</div>
+</td>
+<td><div><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at selenium_java.Lab_8_2.setup(Lab_8_2.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:295)
+	... 29 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+	at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+	... 30 more
+	Suppressed: javax.net.ssl.SSLException: Connection has closed: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.checkEOF(SSLSocketImpl.java:1159)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1004)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:147)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:315)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.impl.io.IncomingHttpEntity.close(IncomingHttpEntity.java:111)
+		at org.apache.hc.core5.http.io.entity.HttpEntityWrapper.close(HttpEntityWrapper.java:120)
+		at org.apache.hc.client5.http.impl.classic.ResponseEntityProxy.close(ResponseEntityProxy.java:180)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.message.BasicClassicHttpResponse.close(BasicClassicHttpResponse.java:93)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.doClose(CloseableHttpResponse.java:207)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.close(CloseableHttpResponse.java:228)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:266)
+		... 30 more
+	Caused by: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+		at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1700)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1081)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+		at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+		at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+		... 30 more
+		Suppressed: java.net.SocketException: Connection reset by peer
+			at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+			at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+			at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+			at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1035)
+			at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:81)
+			at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:414)
+			... 48 more
+	Caused by: [CIRCULAR REFERENCE: java.net.SocketException: Connection reset]
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1163421535", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1163421535'><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at selenium_java.Lab_8_2.setup(Lab_8_2.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:295)
+	... 29 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+	at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+	... 30 more
+	Suppressed: javax.net.ssl.SSLException: Connection has closed: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.checkEOF(SSLSocketImpl.java:1159)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1004)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:147)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:315)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.impl.io.IncomingHttpEntity.close(IncomingHttpEntity.java:111)
+		at org.apache.hc.core5.http.io.entity.HttpEntityWrapper.close(HttpEntityWrapper.java:120)
+		at org.apache.hc.client5.http.impl.classic.ResponseEntityProxy.close(ResponseEntityProxy.java:180)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.message.BasicClassicHttpResponse.close(BasicClassicHttpResponse.java:93)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.doClose(CloseableHttpResponse.java:207)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.close(CloseableHttpResponse.java:228)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:266)
+		... 30 more
+	Caused by: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+		at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1700)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1081)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+		at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+		at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+		... 30 more
+		Suppressed: java.net.SocketException: Connection reset by peer
+			at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+			at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+			at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+			at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1035)
+			at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:81)
+			at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:414)
+			... 48 more
+	Caused by: [CIRCULAR REFERENCE: java.net.SocketException: Connection reset]
+</pre></div></td>
+<td>118</td>
+<td>selenium_java.Lab_8_2@7530ad9c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='selenium_java.Lab_8_2.tearDown()'><b>tearDown</b><br>Test class: selenium_java.Lab_8_2</td>
+<td></td>
+<td>0</td>
+<td>selenium_java.Lab_8_2@7530ad9c</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-skipped'>
+<tr><td colspan='4' align='center'><b>SKIPPED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='selenium_java.Lab_8_2.searchFlow()'><b>searchFlow</b><br>Test class: selenium_java.Lab_8_2</td>
+<td><div><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at selenium_java.Lab_8_2.setup(Lab_8_2.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:295)
+	... 29 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+	at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+	... 30 more
+	Suppressed: javax.net.ssl.SSLException: Connection has closed: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.checkEOF(SSLSocketImpl.java:1159)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1004)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:147)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:315)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.impl.io.IncomingHttpEntity.close(IncomingHttpEntity.java:111)
+		at org.apache.hc.core5.http.io.entity.HttpEntityWrapper.close(HttpEntityWrapper.java:120)
+		at org.apache.hc.client5.http.impl.classic.ResponseEntityProxy.close(ResponseEntityProxy.java:180)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.message.BasicClassicHttpResponse.close(BasicClassicHttpResponse.java:93)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.doClose(CloseableHttpResponse.java:207)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.close(CloseableHttpResponse.java:228)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:266)
+		... 30 more
+	Caused by: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+		at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1700)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1081)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+		at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+		at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+		... 30 more
+		Suppressed: java.net.SocketException: Connection reset by peer
+			at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+			at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+			at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+			at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1035)
+			at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:81)
+			at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:414)
+			... 48 more
+	Caused by: [CIRCULAR REFERENCE: java.net.SocketException: Connection reset]
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace356681073", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace356681073'><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at selenium_java.Lab_8_2.setup(Lab_8_2.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:295)
+	... 29 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+	at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+	... 30 more
+	Suppressed: javax.net.ssl.SSLException: Connection has closed: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.checkEOF(SSLSocketImpl.java:1159)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1004)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:147)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:315)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.impl.io.IncomingHttpEntity.close(IncomingHttpEntity.java:111)
+		at org.apache.hc.core5.http.io.entity.HttpEntityWrapper.close(HttpEntityWrapper.java:120)
+		at org.apache.hc.client5.http.impl.classic.ResponseEntityProxy.close(ResponseEntityProxy.java:180)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.message.BasicClassicHttpResponse.close(BasicClassicHttpResponse.java:93)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.doClose(CloseableHttpResponse.java:207)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.close(CloseableHttpResponse.java:228)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:266)
+		... 30 more
+	Caused by: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+		at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1700)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1081)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+		at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+		at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+		... 30 more
+		Suppressed: java.net.SocketException: Connection reset by peer
+			at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+			at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+			at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+			at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1035)
+			at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:81)
+			at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:414)
+			... 48 more
+	Caused by: [CIRCULAR REFERENCE: java.net.SocketException: Connection reset]
+</pre></div></td>
+<td>0</td>
+<td>selenium_java.Lab_8_2@7530ad9c</td></tr>
+<tr>
+<td title='selenium_java.Lab_8_2.desktopMacFlow()'><b>desktopMacFlow</b><br>Test class: selenium_java.Lab_8_2</td>
+<td><div><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at selenium_java.Lab_8_2.setup(Lab_8_2.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:295)
+	... 29 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+	at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+	... 30 more
+	Suppressed: javax.net.ssl.SSLException: Connection has closed: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.checkEOF(SSLSocketImpl.java:1159)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1004)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:147)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:315)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.impl.io.IncomingHttpEntity.close(IncomingHttpEntity.java:111)
+		at org.apache.hc.core5.http.io.entity.HttpEntityWrapper.close(HttpEntityWrapper.java:120)
+		at org.apache.hc.client5.http.impl.classic.ResponseEntityProxy.close(ResponseEntityProxy.java:180)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.message.BasicClassicHttpResponse.close(BasicClassicHttpResponse.java:93)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.doClose(CloseableHttpResponse.java:207)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.close(CloseableHttpResponse.java:228)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:266)
+		... 30 more
+	Caused by: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+		at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1700)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1081)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+		at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+		at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+		... 30 more
+		Suppressed: java.net.SocketException: Connection reset by peer
+			at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+			at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+			at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+			at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1035)
+			at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:81)
+			at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:414)
+			... 48 more
+	Caused by: [CIRCULAR REFERENCE: java.net.SocketException: Connection reset]
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace559641566", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace559641566'><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at selenium_java.Lab_8_2.setup(Lab_8_2.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:295)
+	... 29 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+	at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+	... 30 more
+	Suppressed: javax.net.ssl.SSLException: Connection has closed: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.checkEOF(SSLSocketImpl.java:1159)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1004)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:147)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:315)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.impl.io.IncomingHttpEntity.close(IncomingHttpEntity.java:111)
+		at org.apache.hc.core5.http.io.entity.HttpEntityWrapper.close(HttpEntityWrapper.java:120)
+		at org.apache.hc.client5.http.impl.classic.ResponseEntityProxy.close(ResponseEntityProxy.java:180)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.message.BasicClassicHttpResponse.close(BasicClassicHttpResponse.java:93)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.doClose(CloseableHttpResponse.java:207)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.close(CloseableHttpResponse.java:228)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:266)
+		... 30 more
+	Caused by: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+		at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1700)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1081)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+		at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+		at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+		... 30 more
+		Suppressed: java.net.SocketException: Connection reset by peer
+			at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+			at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+			at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+			at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1035)
+			at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:81)
+			at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:414)
+			... 48 more
+	Caused by: [CIRCULAR REFERENCE: java.net.SocketException: Connection reset]
+</pre></div></td>
+<td>0</td>
+<td>selenium_java.Lab_8_2@7530ad9c</td></tr>
+<tr>
+<td title='selenium_java.Lab_8_2.verifyTitle()'><b>verifyTitle</b><br>Test class: selenium_java.Lab_8_2</td>
+<td><div><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at selenium_java.Lab_8_2.setup(Lab_8_2.java:36)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:295)
+	... 29 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+	at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+	... 30 more
+	Suppressed: javax.net.ssl.SSLException: Connection has closed: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.checkEOF(SSLSocketImpl.java:1159)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1004)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:147)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:315)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.impl.io.IncomingHttpEntity.close(IncomingHttpEntity.java:111)
+		at org.apache.hc.core5.http.io.entity.HttpEntityWrapper.close(HttpEntityWrapper.java:120)
+		at org.apache.hc.client5.http.impl.classic.ResponseEntityProxy.close(ResponseEntityProxy.java:180)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.message.BasicClassicHttpResponse.close(BasicClassicHttpResponse.java:93)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.doClose(CloseableHttpResponse.java:207)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.close(CloseableHttpResponse.java:228)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:266)
+		... 30 more
+	Caused by: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+		at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1700)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1081)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+		at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+		at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+		... 30 more
+		Suppressed: java.net.SocketException: Connection reset by peer
+			at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+			at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+			at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+			at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1035)
+			at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:81)
+			at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:414)
+			... 48 more
+	Caused by: [CIRCULAR REFERENCE: java.net.SocketException: Connection reset]
+... Removed 15 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1625501012", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1625501012'><pre>io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1447)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.fallback(WebDriverManager.java:1463)
+	at io.github.bonigarcia.wdm.WebDriverManager.handleException(WebDriverManager.java:1441)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1210)
+	at io.github.bonigarcia.wdm.WebDriverManager.setup(WebDriverManager.java:429)
+	at selenium_java.Lab_8_2.setup(Lab_8_2.java:36)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:71)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurationMethod(ConfigInvoker.java:400)
+	at org.testng.internal.invokers.ConfigInvoker.invokeConfigurations(ConfigInvoker.java:333)
+	at org.testng.internal.invokers.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:188)
+	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+	at org.testng.TestRunner.privateRun(TestRunner.java:741)
+	at org.testng.TestRunner.run(TestRunner.java:616)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+	at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:463)
+	at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:64)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:842)
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriverUrls(EdgeDriverManager.java:138)
+	at io.github.bonigarcia.wdm.WebDriverManager.createUrlHandler(WebDriverManager.java:1468)
+	at io.github.bonigarcia.wdm.WebDriverManager.download(WebDriverManager.java:1298)
+	at io.github.bonigarcia.wdm.WebDriverManager.manage(WebDriverManager.java:1204)
+	... 25 more
+Caused by: io.github.bonigarcia.wdm.config.WebDriverManagerException: java.net.SocketException: Connection reset
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:308)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:295)
+	... 29 more
+Caused by: java.net.SocketException: Connection reset
+	at java.base/sun.nio.ch.NioSocketImpl.implRead(NioSocketImpl.java:328)
+	at java.base/sun.nio.ch.NioSocketImpl.read(NioSocketImpl.java:355)
+	at java.base/sun.nio.ch.NioSocketImpl$1.read(NioSocketImpl.java:808)
+	at java.base/java.net.Socket$SocketInputStream.read(Socket.java:966)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.read(SSLSocketInputRecord.java:484)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.readHeader(SSLSocketInputRecord.java:478)
+	at java.base/sun.security.ssl.SSLSocketInputRecord.bytesInCompletePacket(SSLSocketInputRecord.java:70)
+	at java.base/sun.security.ssl.SSLSocketImpl.readApplicationRecord(SSLSocketImpl.java:1461)
+	at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1065)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+	at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+	at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+	at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+	at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+	at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+	at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+	at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+	at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+	... 30 more
+	Suppressed: javax.net.ssl.SSLException: Connection has closed: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.checkEOF(SSLSocketImpl.java:1159)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1004)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:147)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.close(ChunkedInputStream.java:315)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.impl.io.IncomingHttpEntity.close(IncomingHttpEntity.java:111)
+		at org.apache.hc.core5.http.io.entity.HttpEntityWrapper.close(HttpEntityWrapper.java:120)
+		at org.apache.hc.client5.http.impl.classic.ResponseEntityProxy.close(ResponseEntityProxy.java:180)
+		at org.apache.hc.core5.io.Closer.close(Closer.java:48)
+		at org.apache.hc.core5.http.message.BasicClassicHttpResponse.close(BasicClassicHttpResponse.java:93)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.doClose(CloseableHttpResponse.java:207)
+		at org.apache.hc.client5.http.impl.classic.CloseableHttpResponse.close(CloseableHttpResponse.java:228)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:266)
+		... 30 more
+	Caused by: javax.net.ssl.SSLException: Connection reset
+		at java.base/sun.security.ssl.Alert.createSSLException(Alert.java:127)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:378)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:321)
+		at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:316)
+		at java.base/sun.security.ssl.SSLSocketImpl.handleException(SSLSocketImpl.java:1700)
+		at java.base/sun.security.ssl.SSLSocketImpl$AppInputStream.read(SSLSocketImpl.java:1081)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.fillBuffer(SessionInputBufferImpl.java:149)
+		at org.apache.hc.core5.http.impl.io.SessionInputBufferImpl.readLine(SessionInputBufferImpl.java:280)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.getChunkSize(ChunkedInputStream.java:262)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.nextChunk(ChunkedInputStream.java:223)
+		at org.apache.hc.core5.http.impl.io.ChunkedInputStream.read(ChunkedInputStream.java:184)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:138)
+		at org.apache.hc.core5.http.io.EofSensorInputStream.read(EofSensorInputStream.java:151)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1483)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1107)
+		at org.apache.commons.io.IOUtils.copyLarge(IOUtils.java:1456)
+		at org.apache.commons.io.IOUtils.copy(IOUtils.java:1085)
+		at org.apache.commons.io.IOUtils.toByteArray(IOUtils.java:2702)
+		at io.github.bonigarcia.wdm.WebDriverManager.loadXML(WebDriverManager.java:1609)
+		at io.github.bonigarcia.wdm.managers.EdgeDriverManager.getDriversFromXml(EdgeDriverManager.java:268)
+		... 30 more
+		Suppressed: java.net.SocketException: Connection reset by peer
+			at java.base/sun.nio.ch.NioSocketImpl.implWrite(NioSocketImpl.java:425)
+			at java.base/sun.nio.ch.NioSocketImpl.write(NioSocketImpl.java:445)
+			at java.base/sun.nio.ch.NioSocketImpl$2.write(NioSocketImpl.java:831)
+			at java.base/java.net.Socket$SocketOutputStream.write(Socket.java:1035)
+			at java.base/sun.security.ssl.SSLSocketOutputRecord.encodeAlert(SSLSocketOutputRecord.java:81)
+			at java.base/sun.security.ssl.TransportContext.fatal(TransportContext.java:414)
+			... 48 more
+	Caused by: [CIRCULAR REFERENCE: java.net.SocketException: Connection reset]
+</pre></div></td>
+<td>0</td>
+<td>selenium_java.Lab_8_2@7530ad9c</td></tr>
+</table><p>
+</body>
+</html>
