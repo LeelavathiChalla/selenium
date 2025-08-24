@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ObjectRepository>
+    <page name="RegisterPage">
+        <element name="myAccount" type="xpath">//*[@title='My Account']</element>
+        <element name="register" type="xpath">//*[@id='top-links']//a[text()='Register']</element>
+        <element name="firstName" type="id">input-firstname</element>
+        <element name="lastName" type="id">input-lastname</element>
+        <element name="email" type="id">input-email</element>
+        <element name="telephone" type="id">input-telephone</element>
+        <element name="password" type="id">input-password</element>
+        <element name="confirmPassword" type="id">input-confirm</element>
+        <element name="privacyPolicy" type="name">agree</element>
+        <element name="continueBtn" type="xpath">//*[@value='Continue']</element>
+        <element name="successMsg" type="xpath">//*[@id='content']/h1</element>
+    </page>
+</ObjectRepository>
